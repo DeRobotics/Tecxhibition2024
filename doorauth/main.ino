@@ -1,3 +1,5 @@
+// Download libs for MFRC522 via Lib Manager or https://github.com/miguelbalboa/rfid
+
 #include <MFRC522.h>
 #include <MFRC522Extended.h>
 #include <deprecated.h>
@@ -9,10 +11,6 @@
 #include <MFRC522Extended.h>
 #include <deprecated.h>
 #include <require_cpp11.h>
-
-// The DIY Life
-// Michael Klements
-// 27 January 2020
 
 #include <SPI.h>
 #include <RFID.h>
@@ -102,6 +100,7 @@ void checkAccess(String temp) // Function to check if an identified tag is regis
             delay(200);
         }
     }
+
     if (granted == false) // If the tag is not found
     {
         Serial.println("Access Denied");
